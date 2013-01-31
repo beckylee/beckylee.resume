@@ -1,0 +1,19 @@
+body {
+	background-color: #3EA99F;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+	text-align: center;
+	font-size: 18px;
+}
+
+p, h1 {
+	text-align: center;
+}
+
+h1 {
+	border-width: 5px;
+	border-bottom: black;
+	border-top: black;
+	border-left: black;
+	border-right: black;
+	border-style: solid;
+}
