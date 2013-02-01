@@ -16,3 +16,14 @@ h4 {
 h4, p {
 	line-height: 2px;
 }
+
+
+h1{
+	text-align: center;
+	border-width: 5px;
+	border-bottom: black;
+	border-top: black;
+	border-left: black;
+	border-right: black;
+	border-style: solid;
+}
