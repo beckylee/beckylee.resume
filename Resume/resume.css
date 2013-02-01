@@ -1,12 +1,10 @@
 body {
 	background-color: #F1EAE1;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
-
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 h3 {
 	font-size: 24px;
-	font-style: bold;
 }
 
 h4 {
