@@ -1,0 +1,18 @@
+body {
+	background-color: #F1EAE1;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+
+}
+
+h3 {
+	font-size: 24px;
+	font-style: bold;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h4, p {
+	line-height: 2px;
+}
