@@ -25,5 +25,8 @@ h3 {
 h4, p{
 	line-height: 2px;
 	font-size: 18px;
+}
 
+.bio {
+	line-height: 20px;
 }
