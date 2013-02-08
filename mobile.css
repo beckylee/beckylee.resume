@@ -1,15 +1,41 @@
 body {
-	background-color: #F1EAE1;
+	background-image: url(background.jpg);
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: large;
 }
 
  h1{
+ 	background-color: #F1EAE1;
 	text-align: center;
 	border-width: 5px;
-	border-bottom: black;
-	border-top: black;
-	border-left: black;
-	border-right: black;
-	border-style: solid;
+	border-bottom: #60431C;
+	border-top: #60431C;
+	border-left: #60431C;
+	border-right: #60431C;
+	border-style: #60431C;
+}
+
+#pic{
+	text-align: center;
+	background-color: #F1EAE1;
+	border-bottom: #60431C;
+	border-top: #60431C;
+	border-left: #60431C;
+	border-right: #60431C;
+	border-style: #60431C;
+	margin-left: 20%;
+	margin-right: 20%;
+	
+}
+
+#nave{
+	text-align: left;
+	background-color: #F1EAE1;
+	border-bottom: #60431C;
+	border-top: #60431C;
+	border-left: #60431C;
+	border-right: #60431C;
+	border-style: #60431C;
+	margin-left: 5px;
+	margin-right: 5px;	
 }
