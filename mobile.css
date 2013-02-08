@@ -12,7 +12,7 @@ body {
 	border-top: #60431C;
 	border-left: #60431C;
 	border-right: #60431C;
-	border-style: #60431C;
+	border-style: solid;
 }
 
 #pic{
@@ -23,7 +23,7 @@ body {
 	border-top: #60431C;
 	border-left: #60431C;
 	border-right: #60431C;
-	border-style: #60431C;
+	border-style: solid;
 	margin-left: 20%;
 	margin-right: 20%;
 	padding-top: 5px;
@@ -39,7 +39,15 @@ body {
 	border-top: #60431C;
 	border-left: #60431C;
 	border-right: #60431C;
-	border-style: #60431C;
+	border-style: solid;
 	margin-left: 5px;
 	margin-right: 5px;	
+}
+
+a:link, a:visited{
+	color: #60431C;
+}
+
+a:active, a:hover{
+	color: #555501;
 }
