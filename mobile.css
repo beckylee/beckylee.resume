@@ -40,8 +40,8 @@ body {
 	border-left: #60431C;
 	border-right: #60431C;
 	border-style: solid;
-	margin-left: 5px;
-	margin-right: 5px;	
+	margin-left: 2px;
+	margin-right: 2px;	
 }
 
 a:link, a:visited{
@@ -50,4 +50,15 @@ a:link, a:visited{
 
 a:active, a:hover{
 	color: #555501;
+}
+
+#bio {
+	text-align: left;
+	border-width: 5px;
+	background-color: #F1EAE1;
+	border-bottom: #60431C;
+	border-top: #60431C;
+	border-left: #60431C;
+	border-right: #60431C;
+	border-style: solid;
 }
