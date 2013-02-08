@@ -25,10 +25,12 @@ body {
 	border-style: #60431C;
 	margin-left: 20%;
 	margin-right: 20%;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	
 }
 
-#nave{
+#nav{
 	text-align: left;
 	background-color: #F1EAE1;
 	border-bottom: #60431C;
