@@ -358,7 +358,7 @@ function init(lat, lng)
     var R = 6371; // radius of earth in km
     var distances = [];
     var closest = -1;
-    for( i=0;i<map.markers.length; i++ ) {
+    for( i=0;i<markers.length; i++ ) {
         var mlat = map.markers[i].position.lat();
         var mlng = map.markers[i].position.lng();
         var dLat  = rad(mlat - lat);
