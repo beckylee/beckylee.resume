@@ -371,7 +371,9 @@ function init(lat, lng)
         if ( closest == -1 || d < distances[closest] ) {
             closest = i;
         }
+        x.innerHTML += i;
     }
+    
 
     alert(map.markers[closest].title);
 
