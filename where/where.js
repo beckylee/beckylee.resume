@@ -121,97 +121,114 @@ function init(lat, lng)
 		var davis_t = new google.maps.LatLng(42.39674, -71.121815);
 		var davis = new google.maps.Marker({
 			position: davis_t,
-			title: "Davis Square Station"
+			title: "Davis Square Station",
+			icon: blueIcon
 		});
 		
 		var porter_t = new google.maps.LatLng(42.3884, -71.119149);
 		var porter = new google.maps.Marker({
 			position: porter_t,
-			title: "Porter Station"
+			title: "Porter Station",
+			icon: blueIcon
+
 		});
 		
 		var harvard_t = new google.maps.LatLng(42.373362, -71.118956);
 		var harvard = new google.maps.Marker({
 			position: harvard_t,
-			title: "Harvard Station"
+			title: "Harvard Station",
+			icon: blueIcon
 		});
 		
 		var central_t = new google.maps.LatLng(42.365486, -71.103802);
 		var central = new google.maps.Marker({
 			position: central_t,
-			title: "Central Square Station"
+			title: "Central Square Station",
+			icon: blueIcon
 		});
 		
 		var kendall_t = new google.maps.LatLng(42.36249079, -71.08617653);
 		var kendall = new google.maps.Marker({
 			position: kendall_t,
-			title: "Kendall/MIT Station"
+			title: "Kendall/MIT Station",
+			icon: blueIcon
 		});
 		
 		var charles_t = new google.maps.LatLng(42.361166, -71.070628);
 		var charles = new google.maps.Marker({
 			position: charles_t,
-			title: "Charles/MGH Station"
+			title: "Charles/MGH Station",
+			icon: blueIcon
 		});
 		
 		var park_t = new google.maps.LatLng(42.35639457, -71.0624242);
 		var park = new google.maps.Marker({
 			position: park_t,
-			title: "Park Street Station"
+			title: "Park Street Station",
+			icon: blueIcon
 		});
 		
 		var downtown_t = new google.maps.LatLng(42.355518, -71.060225);
 		var downtown = new google.maps.Marker({
 			position: downtown_t,
-			title: "Downtown Crossing Station"
+			title: "Downtown Crossing Station",
+			icon: blueIcon
 		});
 		
 		var south_t = new google.maps.LatLng(42.352271, -71.055242);
 		var south = new google.maps.Marker({
 			position: south_t,
-			title: "South Station"
+			title: "South Station",
+			icon: blueIcon
 		});
 		
 		var broadway_t = new google.maps.LatLng(42.342622, -71.056967);
 		var broadway = new google.maps.Marker({
 			position: broadway_t,
-			title: "Broadway Station"
+			title: "Broadway Station",
+			icon: blueIcon
 		});
 		
 		var andrew_t = new google.maps.LatLng(42.330154, -71.057655);
 		var andrew = new google.maps.Marker({
 			position: andrew_t,
-			title: "Andrew Station"
+			title: "Andrew Station",
+			icon: blueIcon
 		});
 		
 		var jfk_t = new google.maps.LatLng(42.320685, -71.052391);
 		var jfk = new google.maps.Marker({
 			position: jfk_t,
-			title: "JFK/ UMass Station"
+			title: "JFK/ UMass Station",
+			icon: blueIcon
 		});
 		
 		var savin_t = new google.maps.LatLng(42.31129, -71.053331);
 		var savin = new google.maps.Marker({
 			position: savin_t,
-			title: "Savin Hill Station"
+			title: "Savin Hill Station",
+			icon: blueIcon
 		});
 		
 		var fields_t = new google.maps.LatLng(42.300093, -71.061667);
 		var fields = new google.maps.Marker({
 			position: fields_t,
-			title: "Fields Corner Station"
+			title: "Fields Corner Station",
+			icon: blueIcon
 		});
 		
 		var shawmut_t = new google.maps.LatLng(42.29312583, -71.06573796);
 		var shawmut = new google.maps.Marker({
 			position: shawmut_t,
-			title: "Shawmut Station"
+			title: "Shawmut Station",
+			icon: blueIcon
 		});
 		
 		var ashmont_t = new google.maps.LatLng(42.284652, -71.064489);
 		var ashmont = new google.maps.Marker({
 			position: ashmont_t,
-			title: "Ashmont Station"
+			title: "Ashmont Station",
+			icon: blueIcon
 		});
 		
 		//add Braintree stops
@@ -262,7 +279,7 @@ function init(lat, lng)
 			path: stops,
 			strokeColor: '#FF0000',
 			strokeOpacity: 1.0,
-			strokeWeight: 2
+			strokeWeight: 3
 		});
 		
 		redline.setMap(map);
