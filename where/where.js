@@ -249,6 +249,8 @@ function init(lat, lng)
 			strokeWeight: 2
 		});
 		
+		redline.setMap(map);
+		
 				// This is a global info window...
 		var infowindow = new google.maps.InfoWindow();
 
