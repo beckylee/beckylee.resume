@@ -107,6 +107,10 @@ function init(lat, lng)
 			title: "I am here!"
 		});
 		
+		var blueIcon = new GIcon(G_DEFAULT_ICON);
+		blueIcon.image = "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png";
+		markerOptions = { icon:blueIcon };
+		
 		//all of the redline stops
 		var alewife_t = new google.maps.LatLng(42.395428, -71.142483);
 		var alewife = new google.maps.Marker({
@@ -245,7 +249,14 @@ function init(lat, lng)
 			new google.maps.LatLng(42.361166, -71.070628), 
 			new google.maps.LatLng(42.35639457, -71.0624242), 
 			new google.maps.LatLng(42.355518, -71.060225), 
-			new google.maps.LatLng(42.352271, -71.055242)
+			new google.maps.LatLng(42.352271, -71.055242),
+			new google.maps.LatLng(42.342622, -71.056967),
+			new google.maps.LatLng(42.330154, -71.057655),
+			new google.maps.LatLng(42.320685, -71.052391),
+			new google.maps.LatLng(42.31129, -71.053331),
+			new google.maps.LatLng(42.300093, -71.061667),
+			new google.maps.LatLng(42.29312583, -71.06573796),
+			new google.maps.LatLng(42.284652, -71.064489)
 			];
 			
 		var redline = new google.maps.Polyline({
