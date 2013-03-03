@@ -288,7 +288,7 @@ function init(lat, lng)
 		wollaston.setMap(map);
 		qcenter.setMap(map);
 		qadams.setMap(map);
-		braintree.setmap(map);
+		braintree.setMap(map);
 		
 		
 		
