@@ -244,7 +244,7 @@ function init(lat, lng)
 			
 		var redline = new google.maps.Polyline({
 			path: stops,
-			strokeColor: red,
+			strokeColor: '#FF0000',
 			strokeOpacity: 1.0,
 			strokeWeight: 2
 		});
