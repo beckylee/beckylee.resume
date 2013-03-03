@@ -113,16 +113,28 @@ function init(lat, lng)
 			title: "Alewife Station"
 		});
 		
+		
 		var davis_t = new google.maps.LatLng(42.39674, -71.121815);
 		var davis = new google.maps.Marker({
 			position: davis_t,
 			title: "Davis Square Station"
 		});
 		
+		var porter_t = new google.maps.LatLng(42.3884, -71.119149)
+		var porter = new google.maps.Marker({
+			position: porter_t,
+			title: "Porter Station"
+		});
 		
 		marker.setMap(map);
 		alewife.setMap(map);
 		davis.setMap(map);
+		porter.setMap(map);
+		
+		stops = [alewife, davis, porter];
+		google.maps.PolylineOptions({
+			MVCArray:stops
+		});
 		
 				// This is a global info window...
 		var infowindow = new google.maps.InfoWindow();
