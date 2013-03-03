@@ -107,15 +107,14 @@ function init(lat, lng)
 			title: "I am here!"
 		});
 		
-		var blueIcon = new GIcon(G_DEFAULT_ICON);
-		blueIcon.image = "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png";
-		markerOptions = { icon:blueIcon };
-		
+
+		var blueIcon = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png';
 		//all of the redline stops
 		var alewife_t = new google.maps.LatLng(42.395428, -71.142483);
 		var alewife = new google.maps.Marker({
 			position: alewife_t,
-			title: "Alewife Station"
+			title: "Alewife Station",
+			icon: blueIcon
 		});
 		
 		
