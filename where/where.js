@@ -106,8 +106,24 @@ function init(lat, lng)
 			position: location,
 			title: "You are here"
 		});
+		
+		var alewife_t = new google.maps.LatLng(42.395428, -71.142483);
+		var alewife = new google.maps.Marker({
+			position: alewife_t,
+			title: "Alewife Station"
+		});
+		
+		var davis_t = new google.maps.LatLng(42.39674, -71.121815);
+		var davis = new google.maps.Marker({
+			position: davis_t,
+			title: "Davis Square Station"
+		});
+		
+		
 		marker.setMap(map);
-
+		alewife.setMap(map);
+		davis.setMap(map);
+		
 				// This is a global info window...
 		var infowindow = new google.maps.InfoWindow();
 
