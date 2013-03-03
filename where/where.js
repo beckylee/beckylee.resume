@@ -104,7 +104,7 @@ function init(lat, lng)
 				// Create a marker				
 		var marker = new google.maps.Marker({
 			position: location,
-			title: "I am here at " + position
+			title: "I am here!"
 		});
 		
 		//all of the redline stops
