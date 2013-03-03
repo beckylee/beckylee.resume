@@ -57,10 +57,8 @@ var x=document.getElementById("info_div");
 function showPosition(position)
 {
 var x=document.getElementById("info_div");
-
-	x.innerHTML="what";
-	  x.innerHTML="Latitude: " + position.coords.latitude + 
-	  "<br>Longitude: " + position.coords.longitude; 
+	  x.innerHTML="You are at latitude: " + position.coords.latitude + 
+	  "longitude: " + position.coords.longitude; 
 	  init(position.coords.latitude, position.coords.longitude);
 	
  }
@@ -113,7 +111,7 @@ function init(lat, lng)
 		var alewife_t = new google.maps.LatLng(42.395428, -71.142483);
 		var alewife = new google.maps.Marker({
 			position: alewife_t,
-			title: "Alewife Station",
+			title: "Alewife Station. WORK",
 			icon: blueIcon
 		});
 		
