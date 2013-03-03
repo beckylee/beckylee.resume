@@ -104,7 +104,7 @@ function init(lat, lng)
 				// Create a marker				
 		var marker = new google.maps.Marker({
 			position: location,
-			title: "You are here"
+			title: "I am here at " + position
 		});
 		
 		//all of the redline stops
@@ -245,7 +245,7 @@ function init(lat, lng)
 			new google.maps.LatLng(42.361166, -71.070628), 
 			new google.maps.LatLng(42.35639457, -71.0624242), 
 			new google.maps.LatLng(42.355518, -71.060225), 
-			google.maps.LatLng(42.352271, -71.055242)
+			new google.maps.LatLng(42.352271, -71.055242)
 			];
 			
 		var redline = new google.maps.Polyline({
