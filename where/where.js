@@ -112,7 +112,8 @@ function init(lat, lng)
 		var alewife = new google.maps.Marker({
 			position: alewife_t,
 			title: "Alewife Station",
-			icon: blueIcon
+			icon: blueIcon,
+			clickable: true
 		});
 		
 		
@@ -321,7 +322,11 @@ function init(lat, lng)
 		});
 		
 		var braintree_line = [
-			new google.maps.LatLng(42.352271, -71.055242),
+			new google.maps.LatLng(42.352271, -71.055242),	
+			new google.maps.LatLng(42.342622, -71.056967),
+			new google.maps.LatLng(42.330154, -71.057655),
+			new google.maps.LatLng(42.320685, -71.052391),
+			new google.maps.LatLng(42.31129, -71.053331),
 			new google.maps.LatLng(42.275275, -71.029583),
 			new google.maps.LatLng(42.2665139, -71.0203369),
 			new google.maps.LatLng(42.251809, -71.005409),
