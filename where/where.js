@@ -362,8 +362,8 @@ function init(lat, lng)
     for( i=0;i<markers.length; i++ ) {
         var mlat = markers[i].position.lat();
         var mlng = markers[i].position.lng();
-        var dLat  = rad(mlat - lat);
-        var dLong = rad(mlng - lng);
+        var dLat  = (mlat - lat).toRad();
+        var dLong = (mlng - lng).toRad();
         var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
             Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
