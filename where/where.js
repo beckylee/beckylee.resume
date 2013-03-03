@@ -113,6 +113,7 @@ function init(lat, lng)
 			position: alewife_t,
 			title: "Alewife Station",
 			icon: blueIcon,
+			map: map,
 			clickable: true
 		});
 		
