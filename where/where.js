@@ -357,10 +357,11 @@ function init(lat, lng)
 
     var R = 6371; // radius of earth in km
     var distances = [];
+    var markers = [ashmont, davis, porter];
     var closest = -1;
     for( i=0;i<markers.length; i++ ) {
-        var mlat = map.markers[i].position.lat();
-        var mlng = map.markers[i].position.lng();
+        var mlat = markers[i].position.lat();
+        var mlng = markers[i].position.lng();
         var dLat  = rad(mlat - lat);
         var dLong = rad(mlng - lng);
         var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
