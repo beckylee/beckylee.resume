@@ -58,7 +58,7 @@ function showPosition(position)
 {
 var x=document.getElementById("info_div");
 	  x.innerHTML="You are at latitude: " + position.coords.latitude + 
-	  "longitude: " + position.coords.longitude; 
+	  ", longitude: " + position.coords.longitude; 
 	  init(position.coords.latitude, position.coords.longitude);
 	
  }
@@ -111,7 +111,7 @@ function init(lat, lng)
 		var alewife_t = new google.maps.LatLng(42.395428, -71.142483);
 		var alewife = new google.maps.Marker({
 			position: alewife_t,
-			title: "Alewife Station. WORK",
+			title: "Alewife Station",
 			icon: blueIcon
 		});
 		
@@ -229,6 +229,41 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		var quincy_t = new google.maps.LatLng(42.275275, -71.029583);
+		var quincy = new google.maps.Marker({
+			position: quincy_t,
+			title: "North Quincy Station",
+			icon: blueIcon
+		});
+		
+		var wollaston_t = new google.maps.LatLng(42.2665139, -71.0203369);
+		var wollaston = new google.maps.Marker({
+			position: wollaston_t,
+			title: "Wollaston Station",
+			icon: blueIcon
+		});
+		
+		var qcenter_t = new google.maps.LatLng(42.251809, -71.005409);
+		var qcenter = new google.maps.Marker({
+			position: qcenter_t,
+			title: "Quincy Center Station",
+			icon: blueIcon
+		});
+		
+		var qadams_t = new google.maps.LatLng(42.233391, -71.007153);
+		var qadams = new google.maps.Marker({
+			position: qadams_t,
+			title: "Quincy Adams Station",
+			icon: blueIcon
+		});
+		
+		var braintree_t = new google.maps.LatLng(42.2078543, -71.0011385);
+		var braintree = new google.maps.Marker({
+			position: braintree_t,
+			title: "Braintree Station",
+			icon: blueIcon
+		});
+		
 		//add Braintree stops
 		
 		marker.setMap(map);
@@ -249,6 +284,11 @@ function init(lat, lng)
 		fields.setMap(map);
 		shawmut.setMap(map);
 		ashmont.setMap(map);
+		quincy.setMap(map);
+		wollaston.setMap(map);
+		qcenter.setMap(map);
+		qadams.setMap(map);
+		braintree.setmap(map);
 		
 		
 		
@@ -280,7 +320,25 @@ function init(lat, lng)
 			strokeWeight: 3
 		});
 		
+		var braintree_line = [
+			new google.maps.LatLng(42.352271, -71.055242),
+			new google.maps.LatLng(42.275275, -71.029583),
+			new google.maps.LatLng(42.2665139, -71.0203369),
+			new google.maps.LatLng(42.251809, -71.005409),
+			new google.maps.LatLng(42.251809, -71.005409),
+			new google.maps.LatLng(42.233391, -71.007153),
+			new google.maps.LatLng(42.2078543, -71.0011385)
+		];
+		
+		var other_line = new google.maps.Polyline({
+			path: braintree_line,
+			strokeColor: '#FF0000',
+			strokeOpacity: 1.0,
+			strokeWeight: 3
+		});
+		
 		redline.setMap(map);
+		other_line.setMap(map);
 		
 				// This is a global info window...
 		var infowindow = new google.maps.InfoWindow();
