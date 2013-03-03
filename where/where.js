@@ -236,11 +236,17 @@ function init(lat, lng)
 		
 
 		var stops = [
-			alewife,
-			davis,
-			porter,
-			harvard,
-			central, kendall, charles, park, downtown, south];
+			new google.maps.LatLng(42.395428, -71.142483),
+			new google.maps.LatLng(42.39674, -71.121815),
+			new google.maps.LatLng(42.3884, -71.119149),
+			new google.maps.LatLng(42.373362, -71.118956),
+			new google.maps.LatLng(42.365486, -71.103802), 
+			new google.maps.LatLng(42.36249079, -71.08617653), 
+			new google.maps.LatLng(42.361166, -71.070628), 
+			new google.maps.LatLng(42.35639457, -71.0624242), 
+			new google.maps.LatLng(42.355518, -71.060225), 
+			google.maps.LatLng(42.352271, -71.055242)
+			];
 			
 		var redline = new google.maps.Polyline({
 			path: stops,
