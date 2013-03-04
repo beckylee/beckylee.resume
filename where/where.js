@@ -401,8 +401,10 @@ function carmen_waldo(map){
 		{		
 			if(request.readyState==4 && request.status==200)
 			{
-				if(info != null){
-					var str = request.responseText;
+			
+				var str = request.responseText;
+				if(str != null){
+					
 					var info = JSON.parse(str);
 				
 					var waldo_pic = 'waldo.png';
