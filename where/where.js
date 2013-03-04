@@ -362,16 +362,21 @@ function init(lat, lng)
     for( i=0;i<markers.length; i++ ) {
         var mlat = markers[i].position.lat();
         var mlng = markers[i].position.lng();
-        var dLat  = (mlat - lat);
-        var dLong = (mlng - lng);
-        var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-            Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
-        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        var dLat  = deg2rad(mlat - lat);
+        var dLong = deg2rad(mlng - lng);
+        var a =     Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2);
+        var c =  2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         var d = R * c;
         distances[i] = d;
         if ( closest == -1 || d < distances[closest] ) {
             closest = i;
         }
+        
+        function deg2rad(deg) {
+		  return deg * (Math.PI/180)
+		}
     document.getElementById("distance").innerHTML = "The closest t-stop is " + closest;
     }
     
