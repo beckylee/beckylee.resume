@@ -419,7 +419,7 @@ function carmen_waldo(map){
 							title: title_info,
 							icon: waldo_pic
 						});
-						y.innerHTML += "Found Waldo!"
+						y.innerHTML += "Found Waldo!</br>"
 						Waldo.setMap(map);
 					}
 					if(info[0].name == "Carmen Sandiego"){
@@ -430,7 +430,7 @@ function carmen_waldo(map){
 							title: title_info,
 							icon: carmen_pic
 						});
-						y.innerHTML+= "Found Carmen!"
+						y.innerHTML+= "Found Carmen!</br>"
 						Carmen.setMap(map);
 					}					
 					
@@ -443,7 +443,7 @@ function carmen_waldo(map){
 								title: title_info,
 								icon: waldo_pic
 							});
-							y.innerHTML += "Found Waldo!"
+							y.innerHTML += "Found Waldo!</br>"
 							Waldo.setMap(map);
 						}	
 						if(info[1].name == "Carmen Sandiego"){
@@ -454,7 +454,7 @@ function carmen_waldo(map){
 								title: title_info,
 								icon: carmen_pic
 							});
-							y.innerHTML+= "Found Carmen!"
+							y.innerHTML+= "Found Carmen!</br>"
 							Carmen.setMap(map);
 						}
 					}													
