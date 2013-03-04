@@ -404,19 +404,21 @@ function carmen_waldo(map){
 				var str = request.responseText;
 				var info = JSON.parse(str);
 				
+				var waldo_pic = 'waldo.png';
 				if(info.name == "Waldo"){
+					window.alert("got waldo");
 					waldo_loc = new google.maps.LatLng(info.loc.latitude, info.loc.longitude);
 					var Waldo = new google.maps.Marker({
-					position: waldo_loc,
-					title: info.note,
-					
-		});
+						position: waldo_loc,
+						title: info.note,
+						icon: waldo_pic
+					});
 				}
 				
 				console.log(info.length);
 			}
 			else {
-				window.alert("I can't find Waldo and I have no idea where in the world Carmen Sandiego is");
+//				window.alert("I can't find Waldo and I have no idea where in the world Carmen Sandiego is");
 			}
 		}
 	}
