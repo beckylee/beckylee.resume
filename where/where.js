@@ -401,16 +401,15 @@ function carmen_waldo(map){
 		{		
 			if(request.readyState==4 && request.status==200)
 			{
-				var str = request.responseText;
-				var info = JSON.parse(str);
-				
-				var waldo_pic = 'waldo.png';
 				if(info != null){
-					window.alert("got waldo");
+					var str = request.responseText;
+					var info = JSON.parse(str);
+				
+					var waldo_pic = 'waldo.png';
+	
 					person = info.loc;
-					person_info = JSON.parse(person);
 					
-					waldo_loc = new google.maps.LatLng(person_info.latitude, person_info.longitude);
+					waldo_loc = new google.maps.LatLng(person.latitude, person.longitude);
 					var Waldo = new google.maps.Marker({
 						position: waldo_loc,
 						title: info.note,
