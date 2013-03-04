@@ -379,9 +379,8 @@ function init(lat, lng)
 		  return deg * (Math.PI/180)
 		}
     }
-    		var z=document.getElementById("distance");
-		z.innerHTML="mrow";
-		z.innerHTML="The closest t-stop is " + map.markers[closest].title;
+    	var z=document.getElementById("distance");
+		z.innerHTML="The closest t-stop is " + markers[closest];
     
 
 
