@@ -474,10 +474,10 @@ function find_distance(lat, lng, mlat, mlng, name){
 		var infowindow = new google.maps.InfoWindow();
 
 				// Open info window on click of marker
-		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.setContent(marker.title);
-			infowindow.open(map, marker);
-		});
+//		google.maps.event.addListener(marker, 'click', function() {
+//			infowindow.setContent(marker.title);
+//			infowindow.open(map, marker);
+//		});
 
     var R = 6371; // radius of earth in km
 //    var distances;
