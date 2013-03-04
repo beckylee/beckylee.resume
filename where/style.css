@@ -12,6 +12,9 @@ body {
 	height: 100%;
 }
 
-#info_div{
+#top{
 	background-color: #56B4D9;
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size: 18px;
+	color: #D1F7EE;
 }

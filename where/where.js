@@ -1,3 +1,5 @@
+var davis_data;
+
 function where(){
 
 	find_location();
@@ -29,18 +31,21 @@ function where(){
 //		request.send();
 //		request.onreadystatechange=function(){
 //			if(request.readyState==4 && request.status==200){
-//				document.write("hi");
+//				var str = request.responseText;
+//				document.write(str.length);
+//			
+//				davis_data="hi";
 //			
 //			}
 //			else if(request.status!=200) {
 //				document.write("boo");
 //			}
-
-		
+//
+//		
 //		}
-	}
+//	}
 
-//}
+}
 
 function find_location(){
 var x=document.getElementById("info_div");
@@ -372,8 +377,6 @@ function init(lat, lng)
         distances[i] = d;
         if ( closest == -1 || d < distances[closest] ) {
             closest = i;
-                    console.log(markers[i] + markers[i].title + '</br>');
-
         }
         
         function deg2rad(deg) {
@@ -383,6 +386,27 @@ function init(lat, lng)
     	var z=document.getElementById("distance");
 		z.innerHTML="The closest T stop is " + markers[closest].title + " and is " + d + " miles away";
     
+	carmen_waldo(map);
+}
 
-
+function carmen_waldo(map){
+	if(request==null){
+		alert("error creating request object --Ajax not supported?");
+	}
+	else{
+	
+		request.open("GET","http://messagehub.herokuapp.com/a3.json", true);
+		request.send();
+		request.onreadystatechange=function()
+		{
+		
+			if(request.readyState==4 && request.status==200)
+			{
+				document.write("agh");
+			}
+			else if(request.readyState==0 || request.status==404){
+				document.write("error");
+			}
+		}
+	}
 }
