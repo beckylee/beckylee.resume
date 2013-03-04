@@ -1,3 +1,6 @@
+// Get info from website about T stops
+// 
+
 var davis_data;
 
 function where(){
@@ -32,7 +35,7 @@ function where(){
 //		request.onreadystatechange=function(){
 //			if(request.readyState==4 && request.status==200){
 //				var str = request.responseText;
-//				document.write(str.length);
+//				var data = JSON.parse(str);
 //			
 //				davis_data="hi";
 //			
@@ -461,7 +464,7 @@ function carmen_waldo(map, lat, lng){
 				}
 			}
 			else {
-//				window.alert("I can't find Waldo and I have no idea where in the world Carmen Sandiego is");
+				y.innerHTML = "I don't know either";
 			}
 		}
 	}
@@ -473,16 +476,8 @@ function find_distance(lat, lng, mlat, mlng, name){
 				// This is a global info window...
 		var infowindow = new google.maps.InfoWindow();
 
-				// Open info window on click of marker
-//		google.maps.event.addListener(marker, 'click', function() {
-//			infowindow.setContent(marker.title);
-//			infowindow.open(map, marker);
-//		});
 
     var R = 6371; // radius of earth in km
-//    var distances;
- //   var markers = [ashmont, davis, porter];
-//    var closest = -1;
 
         var dLat  = deg2rad(mlat - lat);
         var dLong = deg2rad(mlng - lng);
