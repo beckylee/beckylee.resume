@@ -403,14 +403,14 @@ function carmen_waldo(map){
 			{
 			
 				var str = request.responseText;
-				if(str != null){
-					
+				if(str != null){					
 					var info = JSON.parse(str);
+					console.log(info.length);
 				
 					var waldo_pic = 'waldo.png';
 	
 					person = info.loc;
-					
+					console.log(person);					
 					waldo_loc = new google.maps.LatLng(person.latitude, person.longitude);
 					var Waldo = new google.maps.Marker({
 						position: waldo_loc,
@@ -419,9 +419,7 @@ function carmen_waldo(map){
 					});
 					
 					Waldo.setMap(map);
-					
-				console.log(info.length);
-
+				
 				}
 			}
 			else {
