@@ -402,10 +402,11 @@ function carmen_waldo(map){
 		
 			if(request.readyState==4 && request.status==200)
 			{
-				document.write("agh");
+				var info = request.responseText;
+				console.log(info.length);
 			}
-			else if(request.readyState==0 || request.status==404){
-				document.write("error");
+			else {
+				window.alert("I can't find Waldo and I have no idea where in the world Carmen Sandiego is");
 			}
 		}
 	}
