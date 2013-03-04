@@ -415,9 +415,9 @@ function carmen_waldo(map){
 						title: info.note,
 						icon: waldo_pic
 					});
-				}
-				
 				console.log(info.length);
+
+				}
 			}
 			else {
 //				window.alert("I can't find Waldo and I have no idea where in the world Carmen Sandiego is");
