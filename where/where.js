@@ -462,11 +462,12 @@ function carmen_waldo(map, lat, lng){
 						}
 					}													
 				}
-				if(info.length == 0){
-					y.innerHTML += "Neither do I!";
-				}
+
 			}
 			else {
+							if(info.length == null){
+					y.innerHTML += "Neither do I!";
+				}
 			}
 		}
 	}
