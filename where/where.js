@@ -405,7 +405,7 @@ function carmen_waldo(map){
 				var info = JSON.parse(str);
 				
 				var waldo_pic = 'waldo.png';
-//				if(info.name == "Waldo"){
+				if(info != null){
 					window.alert("got waldo");
 					person = info.loc;
 					person_info = JSON.parse(person);
@@ -416,7 +416,7 @@ function carmen_waldo(map){
 						title: info.note,
 						icon: waldo_pic
 					});
-//				}
+				}
 				
 				console.log(info.length);
 			}
