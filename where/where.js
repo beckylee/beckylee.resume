@@ -390,6 +390,7 @@ function init(lat, lng)
 }
 
 function carmen_waldo(map){
+	var y = document.getElementById("them");
 	if(request==null){
 		alert("error creating request object --Ajax not supported?");
 	}
@@ -418,7 +419,7 @@ function carmen_waldo(map){
 							title: title_info,
 							icon: waldo_pic
 						});
-						them.innerHTML += "Found Waldo!"
+						y.innerHTML += "Found Waldo!"
 						Waldo.setMap(map);
 					}
 					if(info[0].name == "Carmen Sandiego"){
@@ -429,7 +430,7 @@ function carmen_waldo(map){
 							title: title_info,
 							icon: carmen_pic
 						});
-						them.innerHTML+= "Found Carmen!"
+						y.innerHTML+= "Found Carmen!"
 						Carmen.setMap(map);
 					}					
 					
@@ -442,7 +443,7 @@ function carmen_waldo(map){
 								title: title_info,
 								icon: waldo_pic
 							});
-							them.innerHTML += "Found Waldo!"
+							y.innerHTML += "Found Waldo!"
 							Waldo.setMap(map);
 						}	
 						if(info[1].name == "Carmen Sandiego"){
@@ -453,7 +454,7 @@ function carmen_waldo(map){
 								title: title_info,
 								icon: carmen_pic
 							});
-							them.innerHTML+= "Found Carmen!"
+							y.innerHTML+= "Found Carmen!"
 							Carmen.setMap(map);
 						}
 					}													
