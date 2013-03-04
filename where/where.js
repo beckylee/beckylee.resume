@@ -419,7 +419,7 @@ function carmen_waldo(map){
 							title: title_info,
 							icon: waldo_pic
 						});
-						y.innerHTML += "Found Waldo!</br>"
+						find_distance(lat, lng, info[0].loc.latitude, info[0].loc.longitude, "Waldo");
 						Waldo.setMap(map);
 					}
 					if(info[0].name == "Carmen Sandiego"){
@@ -430,7 +430,7 @@ function carmen_waldo(map){
 							title: title_info,
 							icon: carmen_pic
 						});
-						y.innerHTML+= "Found Carmen!</br>"
+						find_distance(lat, lng, info[0].loc.latitude, info[0].loc.longitude, "Carmen");
 						Carmen.setMap(map);
 					}					
 					
@@ -443,7 +443,7 @@ function carmen_waldo(map){
 								title: title_info,
 								icon: waldo_pic
 							});
-							y.innerHTML += "Found Waldo!</br>"
+						find_distance(lat, lng, info[1].loc.latitude, info[1].loc.longitude, "Waldo");
 							Waldo.setMap(map);
 						}	
 						if(info[1].name == "Carmen Sandiego"){
@@ -454,7 +454,7 @@ function carmen_waldo(map){
 								title: title_info,
 								icon: carmen_pic
 							});
-							y.innerHTML+= "Found Carmen!</br>"
+						find_distance(lat, lng, info[1].loc.latitude, info[1].loc.longitude, "Carmen");
 							Carmen.setMap(map);
 						}
 					}													
@@ -465,4 +465,37 @@ function carmen_waldo(map){
 			}
 		}
 	}
+}
+
+function find_distance(lat, lng, mlat, mlng, name){
+	var y = document.getElementById("them");
+
+				// This is a global info window...
+		var infowindow = new google.maps.InfoWindow();
+
+				// Open info window on click of marker
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.setContent(marker.title);
+			infowindow.open(map, marker);
+		});
+
+    var R = 6371; // radius of earth in km
+//    var distances;
+ //   var markers = [ashmont, davis, porter];
+//    var closest = -1;
+
+        var dLat  = deg2rad(mlat - lat);
+        var dLong = deg2rad(mlng - lng);
+        var a =     Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat)) * Math.cos(deg2rad(mlat)) * 
+    Math.sin(dLong/2) * Math.sin(dLong/2);
+        var c =  2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        var d = R * c;
+
+        function deg2rad(deg) {
+		  return deg * (Math.PI/180)
+		}
+		
+		y.innerHTML += name + " is " + d + " miles away from you!";
+    
 }
