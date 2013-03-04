@@ -370,6 +370,7 @@ function init(lat, lng)
         var c =  2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         var d = R * c;
         distances[i] = d;
+        console.log(markers[i] + '</br>');
         if ( closest == -1 || d < distances[closest] ) {
             closest = i;
         }
@@ -379,7 +380,7 @@ function init(lat, lng)
 		}
     }
     	var z=document.getElementById("distance");
-		z.innerHTML="The closest t-stop is " + markers[closest] + " and is " + d + "miles away";
+		z.innerHTML="The closest t-stop is " + markers[closest] + " and is " + d + " miles away";
     
 
 
