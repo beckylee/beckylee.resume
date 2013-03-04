@@ -379,7 +379,7 @@ function init(lat, lng)
 		}
     }
     	var z=document.getElementById("distance");
-		z.innerHTML="The closest t-stop is " + markers[closest] + " and is " + d "miles away";
+		z.innerHTML="The closest t-stop is " + markers[closest] + " and is " + d + "miles away";
     
 
 
