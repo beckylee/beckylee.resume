@@ -405,7 +405,7 @@ function carmen_waldo(map){
 				var info = JSON.parse(str);
 				
 				var waldo_pic = 'waldo.png';
-				if(info.name == "Waldo"){
+//				if(info.name == "Waldo"){
 					window.alert("got waldo");
 					waldo_loc = new google.maps.LatLng(info.loc.latitude, info.loc.longitude);
 					var Waldo = new google.maps.Marker({
@@ -413,7 +413,7 @@ function carmen_waldo(map){
 						title: info.note,
 						icon: waldo_pic
 					});
-				}
+//				}
 				
 				console.log(info.length);
 			}
