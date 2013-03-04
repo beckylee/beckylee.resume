@@ -386,10 +386,10 @@ function init(lat, lng)
     	var z=document.getElementById("distance");
 		z.innerHTML="The closest T stop is " + markers[closest].title + " and is " + d + " miles away";
     
-	carmen_waldo(map);
+	carmen_waldo(map, lat, lng);
 }
 
-function carmen_waldo(map){
+function carmen_waldo(map, lat, lng){
 	var y = document.getElementById("them");
 	if(request==null){
 		alert("error creating request object --Ajax not supported?");
@@ -496,6 +496,6 @@ function find_distance(lat, lng, mlat, mlng, name){
 		  return deg * (Math.PI/180)
 		}
 		
-		y.innerHTML += name + " is " + d + " miles away from you!";
+		y.innerHTML += name + " is " + d + " miles away from you!" + '</br>';
     
 }
