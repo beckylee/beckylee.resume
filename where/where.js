@@ -415,6 +415,9 @@ function carmen_waldo(map){
 						title: info.note,
 						icon: waldo_pic
 					});
+					
+					Waldo.setMap(map);
+					
 				console.log(info.length);
 
 				}
