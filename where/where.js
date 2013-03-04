@@ -370,7 +370,7 @@ function init(lat, lng)
         var c =  2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         var d = R * c;
         distances[i] = d;
-        console.log(markers[i] + markers[i].name + '</br>');
+        console.log(markers[i] + markers[i].title + '</br>');
         if ( closest == -1 || d < distances[closest] ) {
             closest = i;
         }
