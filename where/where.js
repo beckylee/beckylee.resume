@@ -409,11 +409,10 @@ function carmen_waldo(map){
 				
 					var waldo_pic = 'waldo.png';
 					var carmen_pic = 'carmen.png';
-	
+					
 					if(info[0].name == "Waldo"){
 						waldo_loc = new google.maps.LatLng(info[0].loc.latitude, info[0].loc.longitude);
-						var title_info;
-						title_info.innerHTML = info[0].loc.note;
+						var title_info = info[0].loc.note;
 						var Waldo = new google.maps.Marker({
 							position: waldo_loc,
 							title: title_info,
@@ -444,6 +443,8 @@ function carmen_waldo(map){
 							title: title_info,
 							icon: carmen_pic
 						});
+						
+						Carmen.setMap(map);
 					}	
 					if(info[1].name == "Carmen Sandiego"){
 						carmen_loc = new google.maps.LatLng(info[1].loc.latitude, info[1].loc.longitude);
@@ -454,6 +455,8 @@ function carmen_waldo(map){
 							title: title_info,
 							icon: carmen_pic
 						});
+						
+						Carmen.setMap(map);
 					}
 													
 				}
