@@ -411,8 +411,7 @@ function carmen_waldo(map){
 	
 					person = info.loc;
 					console.log(info);
-					console.log(info.loc);
-					console.log(info.loc[0]);					
+					console.log(info[0].loc.latitude);					
 					waldo_loc = new google.maps.LatLng(person.latitude, person.longitude);
 					var Waldo = new google.maps.Marker({
 						position: waldo_loc,
