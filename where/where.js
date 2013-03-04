@@ -377,10 +377,9 @@ function init(lat, lng)
         function deg2rad(deg) {
 		  return deg * (Math.PI/180)
 		}
- 	   document.write("The closest t-stop is " + closest);
+ 	   document.write("The closest t-stop is " + map.markers[closest].title);
     }
     
 
-    alert(map.markers[closest].title);
 
 }
