@@ -409,10 +409,7 @@ function carmen_waldo(map){
 				
 					var waldo_pic = 'waldo.png';
 	
-					person = info.loc;
-					console.log(info);
-					console.log(info[0].loc.latitude);					
-					waldo_loc = new google.maps.LatLng(person.latitude, person.longitude);
+					waldo_loc = new google.maps.LatLng(person[0].loc.latitude, person[0].loc.longitude);
 					var Waldo = new google.maps.Marker({
 						position: waldo_loc,
 						title: info.note,
