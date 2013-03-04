@@ -408,7 +408,9 @@ function carmen_waldo(map){
 //				if(info.name == "Waldo"){
 					window.alert("got waldo");
 					person = info.loc;
-					waldo_loc = new google.maps.LatLng(person.latitude, person.longitude);
+					person_info = JSON.parse(person);
+					
+					waldo_loc = new google.maps.LatLng(person_info.latitude, person_info.longitude);
 					var Waldo = new google.maps.Marker({
 						position: waldo_loc,
 						title: info.note,
