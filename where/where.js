@@ -465,9 +465,7 @@ function carmen_waldo(map, lat, lng){
 
 			}
 			else {
-							if(info == null){
-					y.innerHTML += "Neither do I!";
-				}
+
 			}
 		}
 	}
