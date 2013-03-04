@@ -398,11 +398,21 @@ function carmen_waldo(map){
 		request.open("GET","http://messagehub.herokuapp.com/a3.json", true);
 		request.send();
 		request.onreadystatechange=function()
-		{
-		
+		{		
 			if(request.readyState==4 && request.status==200)
 			{
-				var info = request.responseText;
+				var str = request.responseText;
+				var info = JSON.parse(str);
+				
+				if(info.name == "Waldo"){
+					waldo_loc = new google.maps.LatLng(info.loc.latitude, info.loc.longitude);
+					var Waldo = new google.maps.Marker({
+					position: waldo_loc,
+					title: info.note,
+					
+		});
+				}
+				
 				console.log(info.length);
 			}
 			else {
