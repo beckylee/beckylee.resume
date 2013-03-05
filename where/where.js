@@ -258,7 +258,7 @@ function where(){
 						}
 						qadams_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
-				braintree
+				//braintree
 					if(data[i].PlatformKey == "RBRAS"){
 						braintree_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
@@ -673,10 +673,9 @@ function carmen_waldo(map, lat, lng){
 			{
 			
 				var str = request.responseText;
-				if(str != null){					
+				if(strValue){					
 					var info = JSON.parse(str);
-					console.log(info.length);
-				
+									
 					var waldo_pic = 'waldo.png';
 					var carmen_pic = 'carmen.png';
 					
