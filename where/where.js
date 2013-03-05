@@ -3,6 +3,9 @@
 
 var alewife_data = "Alewife</br></br>";
 var davis_data = "Davis Square</br></br>";
+var porter_data = "Porter</br></br>";
+var harvard_data = "Harvard Square</br></br>";
+var central_data = "Central Square</br></br>";
 
 function where(){
 
@@ -39,9 +42,11 @@ function where(){
 				var data = JSON.parse(str);
 				
 				for(var i=0; i<data.length; i++){
+				//alewife
 					if(data[i].PlatformKey == "RALEN"){
 						alewife_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
+				//davis
 					if(data[i].PlatformKey =="RDAVN" || data[i].PlatformKey == "RDAVS"){
 						var direction;
 						if(data[i].PlatformKey == "RDAVN"){
@@ -51,6 +56,36 @@ function where(){
 						}
 						davis_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
+				//porter
+					if(data[i].PlatformKey =="RPORN" || data[i].PlatformKey == "RPORS"){
+						var direction;
+						if(data[i].PlatformKey == "RPORN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RPORS"){
+							direction = "Southbound";
+						}
+						porter_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}	
+				//harvard
+					if(data[i].PlatformKey =="RHARN" || data[i].PlatformKey == "RHARS"){
+						var direction;
+						if(data[i].PlatformKey == "RHARN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RHARS"){
+							direction = "Southbound";
+						}
+						harvard_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}	
+				//central
+					if(data[i].PlatformKey =="RCENN" || data[i].PlatformKey == "RCENS"){
+						var direction;
+						if(data[i].PlatformKey == "RCENN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RCENS"){
+							direction = "Southbound";
+						}
+						central_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}			
 				}
 			
 			}
@@ -156,8 +191,9 @@ function init(lat, lng)
 			position: porter_t,
 			title: "Porter Station",
 			icon: blueIcon
-
 		});
+		
+		addInfoWindow(porter, porter_data, map);
 		
 		var harvard_t = new google.maps.LatLng(42.373362, -71.118956);
 		var harvard = new google.maps.Marker({
@@ -166,12 +202,16 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(harvard, harvard_data, map);
+		
 		var central_t = new google.maps.LatLng(42.365486, -71.103802);
 		var central = new google.maps.Marker({
 			position: central_t,
 			title: "Central Square Station",
 			icon: blueIcon
 		});
+		
+		addInfoWindow(central, central_data, map);
 		
 		var kendall_t = new google.maps.LatLng(42.36249079, -71.08617653);
 		var kendall = new google.maps.Marker({
