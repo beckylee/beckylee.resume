@@ -260,9 +260,9 @@ function where(){
 						qadams_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
 				//braintree
-					if(data[i].PlatformKey == "RBRAS"){
-						braintree_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
-					}
+//					if(data[i].PlatformKey == "RBRAS"){
+//						braintree_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+//					}
 				}
 			
 			}
