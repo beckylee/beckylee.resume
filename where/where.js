@@ -731,6 +731,9 @@ function carmen_waldo(map, lat, lng){
 						}
 					}													
 				}
+				else{
+					console.log("fuck");
+				}
 
 			}
 			else {
