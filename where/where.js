@@ -25,28 +25,27 @@ function where(){
 		}
 	}
 	
-//	if(request==null){
-//		alert("error creating request object --Ajax not supported?");
-//	}
-//	else{
+	if(request==null){
+		alert("error creating request object --Ajax not supported?");
+	}
+	else{
 	
-//		request.open("GET","http://mbtamap-cedar.herokuapp.com/mapper/redline.json", true);
-//		request.send();
-//		request.onreadystatechange=function(){
-//			if(request.readyState==4 && request.status==200){
-//				var str = request.responseText;
-//				var data = JSON.parse(str);
-//			
-//				davis_data="hi";
-//			
-//			}
-//			else if(request.status!=200) {
-//				document.write("boo");
-//			}
-//
-//		
-//		}
-//	}
+		request.open("GET","http://mbtamap-cedar.herokuapp.com/mapper/redline.json", true);
+		request.send();
+		request.onreadystatechange=function(){
+			if(request.readyState==4 && request.status==200){
+				var str = request.responseText;
+				var data = JSON.parse(str);
+			
+			
+			}
+			else if(request.status!=200) {
+				document.write("boo");
+			}
+
+		
+		}
+	}
 
 }
 
@@ -110,7 +109,7 @@ function init(lat, lng)
 				// Create a marker				
 		var marker = new google.maps.Marker({
 			position: location,
-			title: "I am here!"
+			title: "You are here!"
 		});
 		
 
@@ -120,9 +119,9 @@ function init(lat, lng)
 		var alewife = new google.maps.Marker({
 			position: alewife_t,
 			title: "Alewife Station",
-			icon: blueIcon,
-			map: map,
-			clickable: true
+//			icon: blueIcon,
+//			map: map,
+//			clickable: true
 		});
 		
 		
