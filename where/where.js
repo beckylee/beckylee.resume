@@ -39,9 +39,9 @@ function where(){
 			
 			
 			}
-			else if(request.status!=200) {
-				document.write("boo");
-			}
+//			else if(request.status!=200) {
+//				document.write("boo");
+//			}
 
 		
 		}
@@ -118,7 +118,7 @@ function init(lat, lng)
 		var alewife_t = new google.maps.LatLng(42.395428, -71.142483);
 		var alewife = new google.maps.Marker({
 			position: alewife_t,
-			title: "Alewife Station",
+			title: "Alewife Station"
 //			icon: blueIcon,
 //			map: map,
 //			clickable: true
@@ -128,8 +128,9 @@ function init(lat, lng)
 		var davis_t = new google.maps.LatLng(42.39674, -71.121815);
 		var davis = new google.maps.Marker({
 			position: davis_t,
-			title: "Davis Square Station",
-			icon: blueIcon
+			icon: blueIcon,
+			title: "Davis Square Station"
+
 		});
 		
 		var porter_t = new google.maps.LatLng(42.3884, -71.119149);
