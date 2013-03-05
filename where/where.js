@@ -217,7 +217,7 @@ function where(){
 					}
 				//ashmont
 					if(data[i].PlatformKey == "RASHS"){
-						davis_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+						ashmont_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
 				//north quincy
 					if(data[i].PlatformKey =="RNQUN" || data[i].PlatformKey == "RNQUS"){
