@@ -23,7 +23,7 @@ var nquincy_data = "North Quincy</br></br>";
 var wollaston_data = "Wollaston</br></br>";
 var qcenter_data = "Quincy Center</br></br>";
 var qadams_data = "Quincy Adams</br></br>";
-//var braintree_data = "Braintree</br></br>";
+var braintree_data = "Braintree</br></br>";
 
 function where(){
 
@@ -258,10 +258,10 @@ function where(){
 						}
 						qadams_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
-				//braintree
-//					if(data[i].PlatformKey == "RBRAS"){
-//						braintree_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
-//					}
+				braintree
+					if(data[i].PlatformKey == "RBRAS"){
+						braintree_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
 				}
 			
 			}
@@ -477,7 +477,7 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
-		addInfoWindow(fields, fields, map);
+		addInfoWindow(fields, fields_data, map);
 		
 		var shawmut_t = new google.maps.LatLng(42.29312583, -71.06573796);
 		var shawmut = new google.maps.Marker({
@@ -504,7 +504,7 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
-		addInfoWindow(quincy, nquincy, map);
+		addInfoWindow(quincy, nquincy_data, map);
 		
 		var wollaston_t = new google.maps.LatLng(42.2665139, -71.0203369);
 		var wollaston = new google.maps.Marker({
@@ -540,7 +540,7 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
-//		addInfoWindow(braintree, braintree_data, map);
+		addInfoWindow(braintree, braintree_data, map);
 		
 		marker.setMap(map);
 		alewife.setMap(map);
