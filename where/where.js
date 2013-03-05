@@ -16,6 +16,14 @@ var broadway_data = "Broadway</br></br>";
 var andrew_data = "Andrew</br></br>";
 var jfk_data = "JFK</br></br>";
 var savin_data = "Savin Hill</br></br>";
+var fields_data = "Fields Hill</br></br>";
+var shawmut_data = "Shawmut</br></br>";
+var ashmont_data = "Ashmont</br></br>";
+var nquincy_data = "North Quincy</br></br>";
+var wollaston_data = "Wollaston</br></br>";
+var qcenter_data = "Quincy Center</br></br>";
+var qadams_data = "Quincy Adams</br></br>";
+var braintree_data = "Braintree</br></br>";
 
 
 function where(){
@@ -186,6 +194,74 @@ function where(){
 							direction = "Southbound";
 						}
 						savin_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//fields
+					if(data[i].PlatformKey =="RFIEN" || data[i].PlatformKey == "RFIES"){
+						var direction;
+						if(data[i].PlatformKey == "RFIEN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RFIES"){
+							direction = "Southbound";
+						}
+						fields_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//shawmut
+					if(data[i].PlatformKey =="RSHAN" || data[i].PlatformKey == "RSHAS"){
+						var direction;
+						if(data[i].PlatformKey == "RSHAN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RSHAS"){
+							direction = "Southbound";
+						}
+						shawmut_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//ashmont
+					if(data[i].PlatformKey == "RASHS"){
+						davis_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//north quincy
+					if(data[i].PlatformKey =="RNQUN" || data[i].PlatformKey == "RNQUS"){
+						var direction;
+						if(data[i].PlatformKey == "RNQUN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RNQUS"){
+							direction = "Southbound";
+						}
+						nquincy_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//wollaston
+					if(data[i].PlatformKey =="RWOLN" || data[i].PlatformKey == "RWOLS"){
+						var direction;
+						if(data[i].PlatformKey == "RWOLN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RWOLS"){
+							direction = "Southbound";
+						}
+						wollaston_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//quincy center
+					if(data[i].PlatformKey =="RQUCN" || data[i].PlatformKey == "RQUCS"){
+						var direction;
+						if(data[i].PlatformKey == "RQUCN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RQUCS"){
+							direction = "Southbound";
+						}
+						qcenter_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//quincy adams
+					if(data[i].PlatformKey =="RQUAN" || data[i].PlatformKey == "RQUAS"){
+						var direction;
+						if(data[i].PlatformKey == "RQUAN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RQUAS"){
+							direction = "Southbound";
+						}
+						qadams_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//braintree
+					if(data[i].PlatformKey == "RBRAS"){
+						braintree_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
 				}
 			
@@ -402,12 +478,16 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(fields, fields, map);
+		
 		var shawmut_t = new google.maps.LatLng(42.29312583, -71.06573796);
 		var shawmut = new google.maps.Marker({
 			position: shawmut_t,
 			title: "Shawmut Station",
 			icon: blueIcon
 		});
+		
+		addInfoWindow(shawmut, shawmut_data, map);
 		
 		var ashmont_t = new google.maps.LatLng(42.284652, -71.064489);
 		var ashmont = new google.maps.Marker({
@@ -416,12 +496,16 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(ashmont, ashmont_data, map);
+		
 		var quincy_t = new google.maps.LatLng(42.275275, -71.029583);
 		var quincy = new google.maps.Marker({
 			position: quincy_t,
 			title: "North Quincy Station",
 			icon: blueIcon
 		});
+		
+		addInfoWindow(quincy, nquincy, map);
 		
 		var wollaston_t = new google.maps.LatLng(42.2665139, -71.0203369);
 		var wollaston = new google.maps.Marker({
@@ -430,12 +514,16 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(wollaston, wollaston_data, map);
+		
 		var qcenter_t = new google.maps.LatLng(42.251809, -71.005409);
 		var qcenter = new google.maps.Marker({
 			position: qcenter_t,
 			title: "Quincy Center Station",
 			icon: blueIcon
 		});
+		
+		addInfoWindow(qcenter, qcenter_data, map);
 		
 		var qadams_t = new google.maps.LatLng(42.233391, -71.007153);
 		var qadams = new google.maps.Marker({
@@ -444,6 +532,8 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(qadams, qadams_data, map);
+		
 		var braintree_t = new google.maps.LatLng(42.2078543, -71.0011385);
 		var braintree = new google.maps.Marker({
 			position: braintree_t,
@@ -451,7 +541,7 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
-		//add Braintree stops
+		addInfoWindow(braintree, braintree_data, map);
 		
 		marker.setMap(map);
 		alewife.setMap(map);
