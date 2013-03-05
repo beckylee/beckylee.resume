@@ -689,6 +689,7 @@ function carmen_waldo(map, lat, lng){
 						});
 						find_distance(lat, lng, info[0].loc.latitude, info[0].loc.longitude, "Waldo");
 						Waldo.setMap(map);
+						addInfoWindow(Waldo, info[0].loc.note, map);
 					}
 					if(info[0].name == "Carmen Sandiego"){
 						carmen_loc = new google.maps.LatLng(info[0].loc.latitude, info[0].loc.longitude);
@@ -700,6 +701,7 @@ function carmen_waldo(map, lat, lng){
 						});
 						find_distance(lat, lng, info[0].loc.latitude, info[0].loc.longitude, "Carmen");
 						Carmen.setMap(map);
+						addInfoWindow(Carmen, info[0].loc.note, map);
 					}					
 					
 					if(info.length == 2){
@@ -712,7 +714,8 @@ function carmen_waldo(map, lat, lng){
 								icon: waldo_pic
 							});
 						find_distance(lat, lng, info[1].loc.latitude, info[1].loc.longitude, "Waldo");
-							Waldo.setMap(map);
+						Waldo.setMap(map);
+						addInfoWindow(Waldo, info[1].loc.note, map);
 						}	
 						if(info[1].name == "Carmen Sandiego"){
 							carmen_loc = new google.maps.LatLng(info[1].loc.latitude, info[1].loc.longitude);
@@ -723,7 +726,8 @@ function carmen_waldo(map, lat, lng){
 								icon: carmen_pic
 							});
 						find_distance(lat, lng, info[1].loc.latitude, info[1].loc.longitude, "Carmen");
-							Carmen.setMap(map);
+						Carmen.setMap(map);
+						addInfoWindow(Carmen, info[1].loc.note, map);
 						}
 					}													
 				}
