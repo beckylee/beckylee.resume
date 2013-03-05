@@ -1,7 +1,8 @@
 // Get info from website about T stops
 // 
 
-var alewife_data = "Alewife</br>";
+var alewife_data = "Alewife</br></br>";
+var davis_data = "Davis Square</br></br>";
 
 function where(){
 
@@ -39,7 +40,16 @@ function where(){
 				
 				for(var i=0; i<data.length; i++){
 					if(data[i].PlatformKey == "RALEN"){
-						alewife_data += ("train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+						alewife_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+					if(data[i].PlatformKey =="RDAVN" || data[i].PlatformKey == "RDAVS"){
+						var direction;
+						if(data[i].PlatformKey == "RDAVN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RDAVS"){
+							direction = "Southbound";
+						}
+						davis_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
 				}
 			
@@ -138,6 +148,8 @@ function init(lat, lng)
 			map:map,
 			title: "Davis Square Station"
 		});
+		
+		addInfoWindow(davis, davis_data, map);
 		
 		var porter_t = new google.maps.LatLng(42.3884, -71.119149);
 		var porter = new google.maps.Marker({
