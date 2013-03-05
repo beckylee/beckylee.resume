@@ -11,6 +11,12 @@ var kendall_data = "Kendall/MIT</br></br>";
 var mgh_data = "Charles MGH</br></br>";
 var park_data = "Park Street</br></br>";
 var downtown_data = "Downtown Crossing</br></br>";
+var south_data = "South Station</br></br>";
+var broadway_data = "Broadway</br></br>";
+var andrew_data = "Andrew</br></br>";
+var jfk_data = "JFK</br></br>";
+var savin_data = "Savin Hill</br></br>";
+
 
 function where(){
 
@@ -130,6 +136,56 @@ function where(){
 							direction = "Southbound";
 						}
 						downtown_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//south station
+					if(data[i].PlatformKey =="RSOUN" || data[i].PlatformKey == "RSOUS"){
+						var direction;
+						if(data[i].PlatformKey == "RSOUN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RSOUS"){
+							direction = "Southbound";
+						}
+						south_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//broadway
+					if(data[i].PlatformKey =="RBRON" || data[i].PlatformKey == "RBROS"){
+						var direction;
+						if(data[i].PlatformKey == "RBRON"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RBROS"){
+							direction = "Southbound";
+						}
+						broadway_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//andrew
+					if(data[i].PlatformKey =="RANDN" || data[i].PlatformKey == "RANDS"){
+						var direction;
+						if(data[i].PlatformKey == "RANDN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RANDS"){
+							direction = "Southbound";
+						}
+						andrew_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//jfk
+					if(data[i].PlatformKey =="RJFKN" || data[i].PlatformKey == "RJFKS"){
+						var direction;
+						if(data[i].PlatformKey == "RJFKN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RJFKS"){
+							direction = "Southbound";
+						}
+						jfk_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//savin
+					if(data[i].PlatformKey =="RSAVN" || data[i].PlatformKey == "RSAVS"){
+						var direction;
+						if(data[i].PlatformKey == "RSAVN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RSAVS"){
+							direction = "Southbound";
+						}
+						savin_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
 				}
 			
@@ -274,7 +330,7 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
-		addInfoWindow(charles, charles_data, map);
+		addInfoWindow(charles, mgh_data, map);
 		
 		var park_t = new google.maps.LatLng(42.35639457, -71.0624242);
 		var park = new google.maps.Marker({
@@ -301,12 +357,16 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(south, south_data, map);
+		
 		var broadway_t = new google.maps.LatLng(42.342622, -71.056967);
 		var broadway = new google.maps.Marker({
 			position: broadway_t,
 			title: "Broadway Station",
 			icon: blueIcon
 		});
+		
+		addInfoWindow(broadway, broadway_data, map);
 		
 		var andrew_t = new google.maps.LatLng(42.330154, -71.057655);
 		var andrew = new google.maps.Marker({
@@ -315,6 +375,8 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(andrew, andrew_data, map);
+		
 		var jfk_t = new google.maps.LatLng(42.320685, -71.052391);
 		var jfk = new google.maps.Marker({
 			position: jfk_t,
@@ -322,12 +384,16 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(jfk, jfk_data, map);
+		
 		var savin_t = new google.maps.LatLng(42.31129, -71.053331);
 		var savin = new google.maps.Marker({
 			position: savin_t,
 			title: "Savin Hill Station",
 			icon: blueIcon
 		});
+		
+		addInfoWindow(savin, savin_data, map);
 		
 		var fields_t = new google.maps.LatLng(42.300093, -71.061667);
 		var fields = new google.maps.Marker({
