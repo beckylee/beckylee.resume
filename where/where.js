@@ -1,7 +1,7 @@
 // Get info from website about T stops
 // 
 
-var davis_data;
+var alewife_data = "Alewife</br>";
 
 function where(){
 
@@ -36,7 +36,12 @@ function where(){
 			if(request.readyState==4 && request.status==200){
 				var str = request.responseText;
 				var data = JSON.parse(str);
-			
+				
+				for(var i=0; i<data.length; i++){
+					if(data[i].PlatformKey == "RALEN"){
+						alewife_data += ("train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				}
 			
 			}
 //			else if(request.status!=200) {
@@ -121,10 +126,9 @@ function init(lat, lng)
 			title: "Alewife Station",
 			icon: blueIcon,
 			map: map,
-//			clickable: true
 		});
 		
-		addInfoWindow(alewife, "sup", map);
+		addInfoWindow(alewife, alewife_data, map);
 		
 		
 		var davis_t = new google.maps.LatLng(42.39674, -71.121815);
