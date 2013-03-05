@@ -25,7 +25,6 @@ var qcenter_data = "Quincy Center</br></br>";
 var qadams_data = "Quincy Adams</br></br>";
 var braintree_data = "Braintree</br></br>";
 
-
 function where(){
 
 	find_location();
@@ -260,9 +259,9 @@ function where(){
 						qadams_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
 					}
 				//braintree
-//					if(data[i].PlatformKey == "RBRAS"){
-//						braintree_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
-//					}
+					if(data[i].PlatformKey == "RBRAS"){
+						braintree_data += ("Train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
 				}
 			
 			}
