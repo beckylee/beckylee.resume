@@ -673,7 +673,7 @@ function carmen_waldo(map, lat, lng){
 			{
 			
 				var str = request.responseText;
-				if(str != ""){					
+				if(str){					
 					var info = JSON.parse(str);
 									
 					var waldo_pic = 'waldo.png';
