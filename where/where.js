@@ -1,11 +1,16 @@
 // Get info from website about T stops
 // 
 
+//global variables for data storage for all the train info
 var alewife_data = "Alewife</br></br>";
 var davis_data = "Davis Square</br></br>";
 var porter_data = "Porter</br></br>";
 var harvard_data = "Harvard Square</br></br>";
 var central_data = "Central Square</br></br>";
+var kendall_data = "Kendall/MIT</br></br>";
+var mgh_data = "Charles MGH</br></br>";
+var park_data = "Park Street</br></br>";
+var downtown_data = "Downtown Crossing</br></br>";
 
 function where(){
 
@@ -85,7 +90,47 @@ function where(){
 							direction = "Southbound";
 						}
 						central_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
-					}			
+					}	
+				//kendall
+					if(data[i].PlatformKey =="RKENN" || data[i].PlatformKey == "RKENS"){
+						var direction;
+						if(data[i].PlatformKey == "RKENN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RKENS"){
+							direction = "Southbound";
+						}
+						kendall_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//mgh
+					if(data[i].PlatformKey =="RMGHN" || data[i].PlatformKey == "RMGHS"){
+						var direction;
+						if(data[i].PlatformKey == "RMGHN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RMGHS"){
+							direction = "Southbound";
+						}
+						mgh_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}		
+				// park
+					if(data[i].PlatformKey =="RPRKN" || data[i].PlatformKey == "RPRKS"){
+						var direction;
+						if(data[i].PlatformKey == "RPRKN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RPRKS"){
+							direction = "Southbound";
+						}
+						park_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
+				//downtown crossing
+					if(data[i].PlatformKey =="RDTCN" || data[i].PlatformKey == "RDTCS"){
+						var direction;
+						if(data[i].PlatformKey == "RDTCN"){
+							direction = "Northbound";
+						} else if (data[i].PlatformKey == "RDTCS"){
+							direction = "Southbound";
+						}
+						downtown_data += (direction + " train " + data[i].InformationType + " at " + data[i].Time + "</br>");
+					}
 				}
 			
 			}
@@ -220,12 +265,16 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(kendall, kendall_data, map);
+		
 		var charles_t = new google.maps.LatLng(42.361166, -71.070628);
 		var charles = new google.maps.Marker({
 			position: charles_t,
 			title: "Charles/MGH Station",
 			icon: blueIcon
 		});
+		
+		addInfoWindow(charles, charles_data, map);
 		
 		var park_t = new google.maps.LatLng(42.35639457, -71.0624242);
 		var park = new google.maps.Marker({
@@ -234,12 +283,16 @@ function init(lat, lng)
 			icon: blueIcon
 		});
 		
+		addInfoWindow(park, park_data, map);
+		
 		var downtown_t = new google.maps.LatLng(42.355518, -71.060225);
 		var downtown = new google.maps.Marker({
 			position: downtown_t,
 			title: "Downtown Crossing Station",
 			icon: blueIcon
 		});
+		
+		addInfoWindow(downtown, downtown_data, map);
 		
 		var south_t = new google.maps.LatLng(42.352271, -71.055242);
 		var south = new google.maps.Marker({
