@@ -670,12 +670,11 @@ function carmen_waldo(map, lat, lng){
 		request.onreadystatechange=function()
 		{		
 			if(request.readyState==4 && request.status==200)
-			{
-			
+			{			
 				var str = request.responseText;
 				if(str){					
 					var info = JSON.parse(str);
-									
+					if(info){				
 					var waldo_pic = 'waldo.png';
 					var carmen_pic = 'carmen.png';
 					
@@ -729,6 +728,7 @@ function carmen_waldo(map, lat, lng){
 						Carmen.setMap(map);
 						addInfoWindow(Carmen, info[1].loc.note, map);
 						}
+					}
 					}													
 				}
 				else{
