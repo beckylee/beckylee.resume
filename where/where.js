@@ -119,8 +119,8 @@ function init(lat, lng)
 		var alewife = new google.maps.Marker({
 			position: alewife_t,
 			title: "Alewife Station"
-//			icon: blueIcon,
-//			map: map,
+			icon: blueIcon,
+			map: map,
 //			clickable: true
 		});
 		
@@ -129,6 +129,7 @@ function init(lat, lng)
 		var davis = new google.maps.Marker({
 			position: davis_t,
 			icon: blueIcon,
+			map:map,
 			title: "Davis Square Station"
 
 		});
