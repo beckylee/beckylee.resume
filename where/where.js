@@ -124,7 +124,7 @@ function init(lat, lng)
 //			clickable: true
 		});
 		
-		addInfoWindow(alewife, "sup");
+		addInfoWindow(alewife, "sup", map);
 		
 		
 		var davis_t = new google.maps.LatLng(42.39674, -71.121815);
@@ -498,7 +498,7 @@ function find_distance(lat, lng, mlat, mlng, name){
     
 }
 
-function addInfoWindow(marker, message) {
+function addInfoWindow(marker, message, map) {
         var info = message;
 
         var infoWindow = new google.maps.InfoWindow({
