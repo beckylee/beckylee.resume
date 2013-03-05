@@ -124,6 +124,8 @@ function init(lat, lng)
 //			clickable: true
 		});
 		
+		addInfoWindow(alewife, "sup");
+		
 		
 		var davis_t = new google.maps.LatLng(42.39674, -71.121815);
 		var davis = new google.maps.Marker({
@@ -494,4 +496,16 @@ function find_distance(lat, lng, mlat, mlng, name){
 		
 		y.innerHTML += name + " is " + d + " miles away from you!" + '</br>';
     
+}
+
+function addInfoWindow(marker, message) {
+        var info = message;
+
+        var infoWindow = new google.maps.InfoWindow({
+            content: message
+        });
+
+    	google.maps.event.addListener(marker, 'click', function () {
+	       infoWindow.open(map, marker);
+	    });
 }
