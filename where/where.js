@@ -118,7 +118,7 @@ function init(lat, lng)
 		var alewife_t = new google.maps.LatLng(42.395428, -71.142483);
 		var alewife = new google.maps.Marker({
 			position: alewife_t,
-			title: "Alewife Station"
+			title: "Alewife Station",
 			icon: blueIcon,
 			map: map,
 //			clickable: true
@@ -131,7 +131,6 @@ function init(lat, lng)
 			icon: blueIcon,
 			map:map,
 			title: "Davis Square Station"
-
 		});
 		
 		var porter_t = new google.maps.LatLng(42.3884, -71.119149);
